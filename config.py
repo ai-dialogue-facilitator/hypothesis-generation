@@ -9,7 +9,7 @@ LICENSE file in the root directory of this source tree.
 CONFIG = {
         "temperature" : 0.5,
         "top_p" : 1.0,
-        "n" :  1,
+        "n" :  2,
         "best_of" : 3,
         "frequency_penalty" : 2.0,
         "presence_penalty" : 2.0,
