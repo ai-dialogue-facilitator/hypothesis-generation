@@ -52,7 +52,9 @@ hypotheses_list = [hypothesis_yes,
                    hypothesis_unknowable]
 
 for hypothesis in hypotheses_list:
-    prompt = f'{question} {hypothesis.prompt} {connector}'
-    response = chatgpt.fill_in(prompt, hypothesis.suffix, **CONFIG)
+    text_before = f'{question} {hypothesis.prompt} {connector}'
+    response = chatgpt.fill_in(text_before=text_before, text_after=hypothesis.suffix, **CONFIG)
     hypothesis.hypothesis = [resp['text'].strip() for resp in response]
     print(hypothesis)
+
+print("All done!")

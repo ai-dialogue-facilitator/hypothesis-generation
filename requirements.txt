@@ -1,0 +1,1 @@
+multilogue>=0.0.11
